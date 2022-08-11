@@ -11,7 +11,7 @@ app.logger.setLevel(logging.INFO)
 
 @app.route("/", methods=["GET"])
 def hello():
-    return f"Hello from {socket.gethostname()}...\n"
+    return f"Hello from {socket.gethostname()}\n"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True, threaded=True)
