@@ -11,7 +11,7 @@ First, create a Docker network for the frontend and backend of the application.
 
 Start the backend `redis` container.
 
->docker run -d --rm --name=redis --network=webapp_network -p 6379:637 -v redis_data:/data redis
+>docker run -d --rm --name=redis --network=webapp_network -p 6379:6379 -v redis_data:/data redis
 
 Start the frontend `simple_web_app` container.
 
