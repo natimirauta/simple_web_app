@@ -1,5 +1,6 @@
 # simple_web_app
 This is a simple/basic web app that, upon having the docker image built, it will open up port 80 for a simple web page with a button to click.
+The reason for this application's existence is to be used in a K8s cluster as an example.
 
 # Run the app
 In order to test this application locally with Docker, follow the instructions:
