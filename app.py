@@ -3,10 +3,12 @@ from flask import Flask, render_template, request, make_response, g
 from redis import Redis
 import json
 import logging
+import os
 import random
 import socket
 
 app = Flask(__name__)
+user = os.getenv('APP_USER', "Anonymous")
 
 gunicorn_error_logger = logging.getLogger('gunicorn.error')
 app.logger.handlers.extend(gunicorn_error_logger.handlers)
@@ -37,6 +39,7 @@ def hello():
     if request.method == "GET":
         resp = make_response(render_template(
             "index.html",
+            user=user,
             hostname=socket.gethostname(),
         ))
 
