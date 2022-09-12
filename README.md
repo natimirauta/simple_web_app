@@ -14,6 +14,6 @@ Start the backend `redis` container.
 
 Start the frontend `simple_web_app` container.
 
->docker run -d --rm --name=simple_web_app -p 5000:80 --network=webapp_network <name-of-the-image>:<tag>
+>docker run -d --rm --name=simple_web_app -p 5000:80 --network=webapp_network ghcr.io/natimirauta/simple_web_app:main
 
 After both frontend and backend containers are up and running, get the IP of the frontend container (`docker inspect simple_web_app`) and open a new tab in your browser with `<IP-of-the-frontend-container>:80`.
